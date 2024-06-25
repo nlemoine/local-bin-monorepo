@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/nlemoine/local-bin-monorepo/compare/1.0.0...1.0.1) (2024-06-25)
+
+
+### Bug Fixes
+
+* Bump mutual n5s/local-bin dependency ([34c7826](https://github.com/nlemoine/local-bin-monorepo/commit/34c78267e7d29929a485c64dfe5559114bf70552))
+
 ## 1.0.0 (2024-06-25)
 
 
