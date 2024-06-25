@@ -22,7 +22,7 @@ return static function (MBConfig $mbConfig): void {
         ComposerJsonSection::LICENSE     => 'MIT',
         ComposerJsonSection::REQUIRE     => [
             'php'           => '^8.1',
-            'n5s/local-bin' => '^0.1',
+            'n5s/local-bin' => '^1.0',
         ],
     ]);
 

@@ -24,7 +24,7 @@
     },
     "require": {
         "php": "^8.1",
-        "n5s/local-bin": "^0.1",
+        "n5s/local-bin": "^1.0",
         "n5s/local-bin-cwebp": "^0.1",
         "n5s/local-bin-gifsicle": "^0.1",
         "n5s/local-bin-jpegoptim": "^0.1",
