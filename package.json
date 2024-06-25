@@ -1,0 +1,20 @@
+{
+    "dependencies": {
+        "advpng-bin": "^7.0.0",
+        "apngasm-bin": "^1.0.3",
+        "cwebp-bin": "^8.0.0",
+        "gif2webp-bin": "^5.0.0",
+        "gifsicle": "^7.0.1",
+        "jpeg-recompress-bin": "^7.0.0",
+        "jpegoptim-bin": "^7.1.0",
+        "jpegtran-bin": "^7.0.0",
+        "mozjpeg": "^8.0.0",
+        "optipng-bin": "^9.0.0",
+        "oxipng-bin": "^1.0.0",
+        "pngcrush-bin": "^7.0.0",
+        "pngout-bin": "^6.0.1",
+        "pngquant-bin": "^9.0.0",
+        "webpmux-bin": "^1.0.0",
+        "zopflipng-bin": "^7.1.0"
+    }
+}

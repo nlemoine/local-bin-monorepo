@@ -1,0 +1,41 @@
+{
+    "name": "n5s/local-bin-spatie-image-optimizer",
+    "description": "Configure spatie/image-optimizer to use local binaries.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "spatie-optimizer",
+        "local-bin",
+        "binaries",
+        "cli",
+        "tools",
+        "utilities"
+    ],
+    "authors": [
+        {
+            "name": "Nicolas Lemoine",
+            "email": "nico@n5s.dev",
+            "homepage": "https://n5s.dev"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/n5s/local-bin-monorepo/issues",
+        "source": "https://github.com/n5s/local-bin-monorepo"
+    },
+    "require": {
+        "php": "^8.1",
+        "n5s/local-bin": "^0.1",
+        "n5s/local-bin-cwebp": "^0.1",
+        "n5s/local-bin-gifsicle": "^0.1",
+        "n5s/local-bin-jpegoptim": "^0.1",
+        "n5s/local-bin-libavif": "^0.1",
+        "n5s/local-bin-optipng": "^0.1",
+        "n5s/local-bin-pngquant": "^0.1",
+        "spatie/image-optimizer": "^1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "n5s\\LocalBin\\Integration\\SpatieImageOptimizer\\": "src/"
+        }
+    }
+}

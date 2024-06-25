@@ -1,0 +1,77 @@
+name: Split
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+
+env:
+  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN_MONOREPO_SPLIT }}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  packages-json:
+    runs-on: ubuntu-latest
+    name: Packages JSON
+    outputs:
+      matrix: ${{ steps.packages.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: |
+          cd packages
+          echo matrix=$(ls | jq -R -s -c 'split("\n")[:-1]') >> $GITHUB_OUTPUT
+        id: packages
+
+  release:
+    runs-on: ubuntu-latest
+    name: Release
+    outputs:
+      created: ${{ steps.release.outputs.packages--release_created }}
+      tag: ${{ steps.release.outputs.packages--tag_name }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: googleapis/release-please-action@v4
+        id: release
+
+      - uses: crazy-max/ghaction-dump-context@v2
+
+  split:
+    runs-on: ubuntu-latest
+    needs: [release, packages-json]
+    name: Split
+    strategy:
+      fail-fast: false
+      matrix:
+        package: ${{ fromJson(needs.packages-json.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: danharrin/monorepo-split-github-action@v2.3.0
+        if: ${{ needs.release.outputs.created }}
+        name: Tag ${{ matrix.package }} with ${{ needs.release.outputs.tag }}
+        with:
+          tag: ${{ needs.release.outputs.tag }}
+          package_directory: 'packages/${{ matrix.package }}'
+          repository_organization: ${{ github.repository_owner }}
+          repository_name: '${{ matrix.package }}'
+
+          user_name: ${{ github.repository_owner }}
+          user_email: 'nico.lemoine@gmail.com'
+
+      - uses: danharrin/monorepo-split-github-action@v2.3.0
+        name: Push to ${{ matrix.package }}
+        if: ${{ needs.release.outputs.created != 'true' }}
+        with:
+          package_directory: 'packages/${{ matrix.package }}'
+          repository_organization: ${{ github.repository_owner }}
+          repository_name: '${{ matrix.package }}'
+
+          user_name: ${{ github.repository_owner }}
+          user_email: 'nico.lemoine@gmail.com'

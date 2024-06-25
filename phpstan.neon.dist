@@ -1,0 +1,4 @@
+parameters:
+    paths:
+        - packages
+    level: max

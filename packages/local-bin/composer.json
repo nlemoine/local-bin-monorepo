@@ -1,0 +1,33 @@
+{
+    "name": "n5s/local-bin",
+    "description": "Base class for providing the right binary depending of your platform.",
+    "type": "library",
+    "keywords": [
+        "binaries",
+        "cli",
+        "tools",
+        "utilities",
+        "local-bin"
+    ],
+    "authors": [
+        {
+            "name": "Nicolas Lemoine",
+            "email": "nico@n5s.dev",
+            "homepage": "https://n5s.dev"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/n5s/local-bin-monorepo/issues",
+        "source": "https://github.com/n5s/local-bin-monorepo"
+    },
+    "require": {
+        "php": "^8.1",
+        "loophp/phposinfo": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "n5s\\LocalBin\\": "src/"
+        }
+    },
+    "licence": "MIT"
+}

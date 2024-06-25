@@ -1,0 +1,92 @@
+{
+    "name": "n5s/local-bin-monorepo",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nicolas Lemoine",
+            "email": "nico@n5s.dev",
+            "homepage": "https://n5s.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "loophp/phposinfo": "^1.8",
+        "spatie/image-optimizer": "^1.7"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.42",
+        "phpstan/phpstan": "^1.11",
+        "phpunit/phpunit": "^9.0",
+        "rector/rector": "^1.1",
+        "symplify/easy-coding-standard": "^12",
+        "symplify/monorepo-builder": "^11.2"
+    },
+    "replace": {
+        "n5s/local-bin": "self.version",
+        "n5s/local-bin-advpng": "self.version",
+        "n5s/local-bin-apngasm": "self.version",
+        "n5s/local-bin-brotli": "self.version",
+        "n5s/local-bin-cwebp": "self.version",
+        "n5s/local-bin-gif2webp": "self.version",
+        "n5s/local-bin-gifsicle": "self.version",
+        "n5s/local-bin-jpeg-recompress": "self.version",
+        "n5s/local-bin-jpegoptim": "self.version",
+        "n5s/local-bin-jpegtran": "self.version",
+        "n5s/local-bin-libavif": "self.version",
+        "n5s/local-bin-mozjpeg": "self.version",
+        "n5s/local-bin-optipng": "self.version",
+        "n5s/local-bin-oxipng": "self.version",
+        "n5s/local-bin-pngcrush": "self.version",
+        "n5s/local-bin-pngout": "self.version",
+        "n5s/local-bin-pngquant": "self.version",
+        "n5s/local-bin-spatie-image-optimizer": "self.version",
+        "n5s/local-bin-spatie-optimizer": "self.version",
+        "n5s/local-bin-webpmux": "self.version",
+        "n5s/local-bin-zopflipng": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "n5s\\LocalBin\\": [
+                "packages/local-bin/src/"
+            ],
+            "n5s\\LocalBin\\Binary\\": [
+                "packages/local-bin-advpng/src/",
+                "packages/local-bin-apngasm/src/",
+                "packages/local-bin-brotli/src/",
+                "packages/local-bin-cwebp/src/",
+                "packages/local-bin-gif2webp/src/",
+                "packages/local-bin-gifsicle/src/",
+                "packages/local-bin-jpeg-recompress/src/",
+                "packages/local-bin-jpegoptim/src/",
+                "packages/local-bin-jpegtran/src/",
+                "packages/local-bin-libavif/src/",
+                "packages/local-bin-mozjpeg/src/",
+                "packages/local-bin-optipng/src/",
+                "packages/local-bin-oxipng/src/",
+                "packages/local-bin-pngcrush/src/",
+                "packages/local-bin-pngout/src/",
+                "packages/local-bin-pngquant/src/",
+                "packages/local-bin-webpmux/src/",
+                "packages/local-bin-zopflipng/src/"
+            ],
+            "n5s\\LocalBin\\Integration\\SpatieImageOptimizer\\": "packages/local-bin-spatie-image-optimizer/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "n5s\\LocalBin\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "cs": "vendor/bin/ecs check",
+        "cs:fix": "vendor/bin/ecs check --fix",
+        "test": "vendor/bin/phpunit --testdox --colors=always"
+    }
+}
