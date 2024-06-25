@@ -1,0 +1,8 @@
+# Changelog
+
+## 1.0.0 (2024-06-25)
+
+
+### Features
+
+* release packages ([22283b2](https://github.com/nlemoine/local-bin-monorepo/commit/22283b264a73e8711de57c879bec51d414312896))
