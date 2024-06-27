@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/nlemoine/local-bin-monorepo/compare/1.1.0...1.1.1) (2024-06-27)
+
+
+### Bug Fixes
+
+* **brotli:** Fix wrong brotli build ([cf479c0](https://github.com/nlemoine/local-bin-monorepo/commit/cf479c0580fe431e065af322a9d6e2873b3d2d38))
+
 ## [1.1.0](https://github.com/nlemoine/local-bin-monorepo/compare/1.0.0...1.1.0) (2024-06-27)
 
 
