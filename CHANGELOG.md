@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/nlemoine/local-bin-monorepo/compare/1.0.0...1.1.0) (2024-06-27)
+
+
+### Features
+
+* Add darwin brotli binary ([12ef204](https://github.com/nlemoine/local-bin-monorepo/commit/12ef20443a9c813e91a7b9fc8f87b0e146561683))
+
 ## 1.0.0 (2024-06-25)
 
 
