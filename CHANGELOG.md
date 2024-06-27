@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/nlemoine/local-bin-monorepo/compare/1.1.1...1.1.2) (2024-06-27)
+
+
+### Bug Fixes
+
+* **brotli:** Remove arm64 binary ([cc6d3ff](https://github.com/nlemoine/local-bin-monorepo/commit/cc6d3ff914a0c4bfd0fc5027ffb2f131581a3897))
+
 ## [1.1.1](https://github.com/nlemoine/local-bin-monorepo/compare/1.1.0...1.1.1) (2024-06-27)
 
 
