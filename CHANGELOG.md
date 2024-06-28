@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/nlemoine/local-bin-monorepo/compare/1.1.2...1.1.3) (2024-06-28)
+
+
+### Bug Fixes
+
+* **spatie-image-optimizer:** Fix dependencies ([e781f6f](https://github.com/nlemoine/local-bin-monorepo/commit/e781f6f94d1f857b220874b0bc9e50bd0d368bbf))
+
 ## [1.1.2](https://github.com/nlemoine/local-bin-monorepo/compare/1.1.1...1.1.2) (2024-06-27)
 
 
