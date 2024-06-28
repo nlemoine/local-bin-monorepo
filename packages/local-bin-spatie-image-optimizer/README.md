@@ -13,7 +13,7 @@ composer require n5s/local-bin-spatie-image-optimizer
 Pass your `Spatie\ImageOptimizer\OptimizerChain` through `OptimizerChainLocalizer::localize` so that all supported optimizers are configured to use the local binary paths.
 
 ```php
-use n5s\PhpBin\Integration\SpatieImageOptimizer\OptimizerChainLocalizer;
+use n5s\LocalBin\Integration\SpatieImageOptimizer\OptimizerChainLocalizer;
 use Spatie\ImageOptimizer\OptimizerChainFactory;
 
 $optimizerChain = OptimizerChainLocalizer::localize(OptimizerChainFactory::create());
