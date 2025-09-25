@@ -21,7 +21,7 @@ jobs:
     outputs:
       matrix: ${{ steps.packages.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - run: |
           cd packages
@@ -35,7 +35,7 @@ jobs:
       created: ${{ steps.release.outputs.packages--release_created }}
       tag: ${{ steps.release.outputs.packages--tag_name }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: googleapis/release-please-action@v4
         id: release
@@ -49,7 +49,7 @@ jobs:
       matrix:
         package: ${{ fromJson(needs.packages-json.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: danharrin/monorepo-split-github-action@v2.3.0
         if: ${{ needs.release.outputs.created }}
