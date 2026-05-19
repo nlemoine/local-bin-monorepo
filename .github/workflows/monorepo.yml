@@ -51,7 +51,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: danharrin/monorepo-split-github-action@v2.4.4
+      - uses: danharrin/monorepo-split-github-action@v2.4.5
         if: ${{ needs.release.outputs.created }}
         name: Tag ${{ matrix.package }} with ${{ needs.release.outputs.tag }}
         with:
@@ -63,7 +63,7 @@ jobs:
           user_name: ${{ github.repository_owner }}
           user_email: 'nico.lemoine@gmail.com'
 
-      - uses: danharrin/monorepo-split-github-action@v2.4.4
+      - uses: danharrin/monorepo-split-github-action@v2.4.5
         name: Push to ${{ matrix.package }}
         if: ${{ needs.release.outputs.created != 'true' }}
         with:
